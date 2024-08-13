@@ -11,7 +11,7 @@ const Button = () => {
     sessionStorage.clear();
     // toast.success("Logout Successfull")
     setTimeout(()=>{
-      navigate('https://backendflavorfeed.onrender.com/login');
+      navigate('/login');
 
     },2000)
 
@@ -34,7 +34,7 @@ const Button = () => {
       </button>
       </>
       :
-      <Link to={'https://backendflavorfeed.onrender.com/login'}><button className="bg-primary text-white  px-6 py-2 rounded-full">
+      <Link to={'/login'}><button className="bg-primary text-white  px-6 py-2 rounded-full">
         Get Started
       </button></Link>
       }
