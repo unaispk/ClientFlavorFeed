@@ -7,7 +7,7 @@ const HomePopularRecipeCard = () => {
     const navigate = useNavigate();
 
     const viewRecipe = (id,category) => {
-        navigate(`https://backendflavorfeed.onrender.com/viewrecipe/${category}/${id}`)
+        navigate(`/viewrecipe/${category}/${id}`)
     }
 
   return (
