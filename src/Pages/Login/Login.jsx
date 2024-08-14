@@ -8,13 +8,6 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const Login = () => {
 
-//     const [inputs, setInputs] = useState({});
-//   const [formErrors, setFormErrors] = useState({});
-//   const [isSubmit, setIsSubmit] = useState(false);
-//   const navigate = useNavigate();
-
-    // const navigate = useNavigate();
-
 
     const [inputs, setInput] = useState({
         email: '',
@@ -40,14 +33,7 @@ const Login = () => {
         return errors;
       };
 
-    // const handleSubmitForm = async (event) => {
-    //     event.preventDefault();
-    //     console.log(inputs);
-    //     setFormErrors(handleValidate(inputs))
-    //     setIsSubmit(true)
-    //     console.log('key', Object.keys(formErrors).length ,isSubmit );       
-    // }
-
+    
     const handleSubmitForm = async (event) => {
         event.preventDefault();
         console.log(inputs);
@@ -68,6 +54,7 @@ const Login = () => {
                 setTimeout(() => {
                     navigate('/');
                 }, 3000);
+
             } catch (error) {
                 if (!error.response || !error.response.data || !error.response.data.message) {
                     toast.error('An unexpected error occurred');
