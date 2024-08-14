@@ -66,11 +66,11 @@ function Signup() {
 
         if (Object.keys(formErrors).length == 0 && toSubmit === true) {
             axios.post('https://backendflavorfeed.onrender.com/user/registeruser', inputs).then((res) => {
-            //   toast.success(res.data.message)
+              toast.success(res.data.message)
                  alert(res.data.message);
             }).catch((error) => {
-            //   toast.error(error.response.data.message);
-                 alert(res.data.message);
+              toast.error(error.response.data.message);
+                //  alert(res.data.message);
             })
             console.log("Successfully registered");
           }
